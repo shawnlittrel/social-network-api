@@ -68,8 +68,27 @@ const userController = {
      //TODO: friend functions
 
      //POST a new friend
+     createFriend({ params }, res) {
+          User.findOneAndUpdate({ _id: params.userId }, { $push: { friends: params.friendId } }, { new: true, runValidators: true })
+          .then(dbFriend => {
+               if (!dbFriend) {
+                    return res.status(404).json({ message: 'No user found with that id.' });
+               }
+               res.json(dbFriend);
+          })
+          .catch(err => res.json(err));
+     },
 
      //DELETE a friend
+     deleteFriend({ params }, res) {
+          User.findOneAndUpdate(
+               { _id: params.userId },
+               { $pull: { friends: { friendId: params.friendId } } },
+               { new: true, runValidators: true }
+          )
+          .then(dbFriend => res.json(dbFriend))
+          .catch(err => res.json(err));
+     }
 };
 
 module.exports = userController;
