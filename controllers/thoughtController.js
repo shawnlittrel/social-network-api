@@ -29,10 +29,10 @@ const thoughtController = {
      //POST to create new thought -> push its id to user's thoughts field
      createThought({ body }, res) {
           Thought.create(body)
-          .then(({ _id }) => {
+          .then(({ thoughtId }) => {
                return User.findOneAndUpdate(
-                    { _id: params.userId },
-                    { $push: { thoughts: _id } },
+                    { _id: body.userId },
+                    { $push: { thoughts: thoughtId } },
                     { new: true, runValidators: true }
                );
           })
