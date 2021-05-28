@@ -27,20 +27,27 @@ const thoughtController = {
 
      //TODO: ASSOCIATE THOUGHT TO USER BY ID
      //POST to create new thought -> push its id to user's thoughts field
+     // createThought({ body }, res){
+     //      Thought.create(body)
+     //      .then(dbThought => res.json(dbThought));
+     // },
      createThought({ body }, res) {
+          console.log('body', body);
           Thought.create(body)
-          .then(({ thoughtId }) => {
+          .then(dbThoughtData => {
+               console.log('THOUGHTDATA', {dbThoughtData});
+               console.log('USER ID', body.userId);
                return User.findOneAndUpdate(
                     { _id: body.userId },
-                    { $push: { thoughts: thoughtId } },
-                    { new: true, runValidators: true }
+                    { $push: { thoughts: dbThoughtData._id } },
+                    { new: true }
                );
           })
           .then(dbUser => {
                if (!dbUser) {
                     return res.status(404).json({ message: 'No user found with that id.' });
                }
-               res.json(dbUser); 
+               res.json(dbUser);
           })
           .catch(err => res.json(err));
      },
