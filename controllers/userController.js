@@ -63,8 +63,13 @@ const userController = {
                res.json(dbUser);
           })
           .catch(err => res.json(err));
-     }
+     },
      //TODO: remove users thoughts when user is deleted
+     //TODO: friend functions
+
+     //POST a new friend
+
+     //DELETE a friend
 };
 
 module.exports = userController;
