@@ -25,6 +25,7 @@ const thoughtController = {
           .catch(err => res.json(err));
      },
 
+     //TODO: ASSOCIATE THOUGHT TO USER BY ID
      //POST to create new thought -> push its id to user's thoughts field
      createThought({ body }, res) {
           Thought.create(body)

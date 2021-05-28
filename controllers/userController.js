@@ -65,11 +65,13 @@ const userController = {
           .catch(err => res.json(err));
      },
      //TODO: remove users thoughts when user is deleted
-     //TODO: friend functions
-
+     
      //POST a new friend
      createFriend({ params }, res) {
-          User.findOneAndUpdate({ _id: params.userId }, { $push: { friends: params.friendId } }, { new: true, runValidators: true })
+          User.findOneAndUpdate(
+               { _id: params.userId }, 
+               { $push: { friends: params.friendId } }, 
+               { new: true, runValidators: true })
           .then(dbFriend => {
                if (!dbFriend) {
                     return res.status(404).json({ message: 'No user found with that id.' });
@@ -83,7 +85,7 @@ const userController = {
      deleteFriend({ params }, res) {
           User.findOneAndUpdate(
                { _id: params.userId },
-               { $pull: { friends: { friendId: params.friendId } } },
+               { $pull: { friends: params.friendId } },
                { new: true, runValidators: true }
           )
           .then(dbFriend => res.json(dbFriend))
