@@ -1,4 +1,4 @@
-const { Thought } = require('../models');
+const { Thought, User } = require('../models');
 
 const thoughtController = {
      //GET all thoughts
@@ -25,12 +25,7 @@ const thoughtController = {
           .catch(err => res.json(err));
      },
 
-     //TODO: ASSOCIATE THOUGHT TO USER BY ID
      //POST to create new thought -> push its id to user's thoughts field
-     // createThought({ body }, res){
-     //      Thought.create(body)
-     //      .then(dbThought => res.json(dbThought));
-     // },
      createThought({ body }, res) {
           console.log('body', body);
           Thought.create(body)
@@ -44,13 +39,17 @@ const thoughtController = {
                );
           })
           .then(dbUser => {
-               console.log('DBUSER', dbUser);
+               console.log('DBUSER', {dbUser});
                if (!dbUser) {
                     return res.status(404).json({ message: 'No user found with that id.' });
                }
                res.json(dbUser);
           })
-          .catch(err => res.json(err));
+          .catch(err => {
+               console.log('ERROR LOG', err);
+               res.json(err);
+          });
+
      },
 
      //PUT to update thought by id
