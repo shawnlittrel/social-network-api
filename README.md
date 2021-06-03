@@ -4,7 +4,7 @@
 ---
     
     
-![Licensing](https://img.shields.io/github/license/shawnlittrel/social-network-api)   ![GitHub language count](https://img.shields.io/github/languages/count/shawnlittrel/social-network-api)   ![GitHub top language](https://img.shields.io/github/languages/top/shawnlittrel/social-network-api)   ![GitHub issues](https://img.shields.io/github/issues/shawnlittrel/social-network-api   ![GitHub closed issues](https://img.shields.io/github/issues-closed/shawnlittrel/social-network-api)      ![GitHub last commit](https://img.shields.io/github/last-commit/shawnlittrel/social-network-api)
+![Licensing](https://img.shields.io/github/license/shawnlittrel/social-network-api)   ![GitHub language count](https://img.shields.io/github/languages/count/shawnlittrel/social-network-api)   ![GitHub top language](https://img.shields.io/github/languages/top/shawnlittrel/social-network-api)   ![GitHub issues](https://img.shields.io/github/issues/shawnlittrel/social-network-api)   ![GitHub closed issues](https://img.shields.io/github/issues-closed/shawnlittrel/social-network-api)      ![GitHub last commit](https://img.shields.io/github/last-commit/shawnlittrel/social-network-api)
 ---
 
 
