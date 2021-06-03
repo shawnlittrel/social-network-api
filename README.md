@@ -39,9 +39,9 @@ Create API requests through Insomnia or Postman, then send them to the specified
 ### Screenshots and Media
 ---
 
-![Demo](./Demogif.GIF)
+![Demo](./Demogif.gif)
  
- ![Video](https://drive.google.com/file/d/1GwhSQ2efST8X3lsTxfoO6zFhiuimXHpM/view?usp=sharing)
+ [Video](https://drive.google.com/file/d/1GwhSQ2efST8X3lsTxfoO6zFhiuimXHpM/view?usp=sharing)
     
 ## Licensing
 ---
