@@ -59,14 +59,14 @@ Copyright 2021 Shawn Littrel
     
 ## Contribute
 ---
-Want to contribute to this project?  Please make a pull request at undefined
+Want to contribute to this project?  Please make a pull request at github.com/shawnlittrel/social-network-api
 
 
     
 ## Questions And Contact
 ---
 * Author: [Shawn Littrel](www.github.com/shawnlittrel)
-* GitHub: (undefined)
+* GitHub: (github.com/shawnlittrel)
 * Email: shawnlittrel@gmail.com
     
     
