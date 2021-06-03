@@ -66,7 +66,7 @@ Want to contribute to this project?  Please make a pull request at github.com/sh
 ## Questions And Contact
 ---
 * Author: [Shawn Littrel](www.github.com/shawnlittrel)
-* GitHub: (github.com/shawnlittrel)
+* GitHub: github.com/shawnlittrel
 * Email: shawnlittrel@gmail.com
     
     
