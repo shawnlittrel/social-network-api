@@ -39,7 +39,7 @@ Create API requests through Insomnia or Postman, then send them to the specified
 ### Screenshots and Media
 ---
 
-![Demo](./Demogif.gif)
+![Demo](./demogif.gif)
  
  [Video](https://drive.google.com/file/d/1GwhSQ2efST8X3lsTxfoO6zFhiuimXHpM/view?usp=sharing)
     
